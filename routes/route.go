@@ -13,6 +13,6 @@ func RouteInit(app *fiber.App, userController *controllers.UserController) {
 	app.Post("/api/users", userController.CreateUser)
 	app.Get("/api/users", userController.GetAllUsers)
 	app.Get("/api/users/:id", userController.GetUserById)
-	app.Put("/api/users/:id", userController.UpdateUser)
+	app.Patch("/api/users/:id", userController.UpdateUser)
 	app.Delete("/api/users/:id", userController.DeleteUser)
 }

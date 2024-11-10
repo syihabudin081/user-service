@@ -47,7 +47,6 @@ func (ur *userRepository) GetUserById(id string) (*models.User, error) {
 }
 
 func (ur *userRepository) UpdateUser(user *models.User) error {
-	// Use the `Updates` method to update only the fields that are set
 	if err := ur.DB.Model(&models.User{}).Where("id = ?", user.ID).Updates(user).Error; err != nil {
 		return err
 	}

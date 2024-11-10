@@ -25,7 +25,7 @@ This project implements a user profile microservice in Go using a microservices 
 
 ## Error Handling
 
-- **Error Package**: The `errors` package is used to generate and handle custom error messages. This ensures that errors are descriptive and actionable.
+- **Error Handling**: The service uses simple `err != nil` checks to handle errors throughout the code. This approach ensures errors are caught and managed appropriately without the use of a separate error package.
 - **Edge Cases**:
     - If a user tries to update or delete a non-existent entry, the service returns an appropriate error message.
     - Database connection failures are handled gracefully, and the application provides informative feedback without crashing.
@@ -77,7 +77,7 @@ The microservice is containerized using Docker and can be orchestrated using Kub
 | GET    | `/api/users`          | Fetch all user profiles   |
 | GET    | `/api/users/:id`      | Get a specific user by ID |
 | POST   | `/api/users`          | Create a new user profile |
-| PUT    | `/api/users/:id`      | Update a user profile     |
+| PATCH    | `/api/users/:id`      | Update a user profile     |
 | DELETE | `/api/users/:id`      | Delete a user profile     |
 
 ## Tests
