@@ -68,7 +68,7 @@ The microservice is containerized using Docker and can be orchestrated using Kub
    ```sh
    docker-compose up --build
    ```
-4. The API will be accessible at `http://localhost:8080`.
+4. The API will be accessible at `http://localhost:3000`.
 
 ## API Endpoints
 
